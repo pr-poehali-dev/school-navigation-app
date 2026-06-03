@@ -16,28 +16,28 @@ interface Room {
 }
 
 const ROOMS: Room[] = [
-  // Этаж 1 — верхний ряд (кабинеты 109–105 слева направо по плану эвакуации)
-  { id: "r109", number: "109", name: "Кабинет 109", type: "classroom", floor: 1, x: 12,  y: 12,  width: 88, height: 60 },
-  { id: "r108", number: "108", name: "Кабинет 108", type: "classroom", floor: 1, x: 108, y: 12,  width: 88, height: 60 },
-  { id: "r107", number: "107", name: "Кабинет 107", type: "classroom", floor: 1, x: 204, y: 12,  width: 88, height: 60 },
-  { id: "r106", number: "106", name: "Кабинет 106", type: "classroom", floor: 1, x: 300, y: 12,  width: 88, height: 60 },
-  { id: "r105", number: "105", name: "Кабинет 105", type: "classroom", floor: 1, x: 396, y: 12,  width: 88, height: 60 },
-  { id: "r1vrach", number: "—", name: "Врач",        type: "service",  floor: 1, x: 492, y: 12,  width: 80, height: 28, description: "Кабинет врача" },
-  { id: "r1med",   number: "—", name: "Медпункт",    type: "service",  floor: 1, x: 492, y: 44,  width: 80, height: 28, description: "Медицинский пункт" },
-  // Этаж 1 — санузлы (левая часть)
-  { id: "r1su1", number: "—", name: "С/У",           type: "service",  floor: 1, x: 12,  y: 82,  width: 40, height: 30 },
-  { id: "r1su2", number: "—", name: "С/У",           type: "service",  floor: 1, x: 12,  y: 116, width: 40, height: 30 },
-  // Этаж 1 — раздевалки правый блок верх
-  { id: "r1razd1", number: "—", name: "Раздевалка",  type: "hall",     floor: 1, x: 492, y: 86,  width: 80, height: 50, description: "Раздевалка (верхний блок)" },
-  // Этаж 1 — нижний ряд: кабинеты 101–104, столовая, психолог
-  { id: "r101", number: "101", name: "Кабинет 101",  type: "classroom", floor: 1, x: 12,  y: 175, width: 88, height: 65, description: "Учебный кабинет" },
-  { id: "r102", number: "102", name: "Кабинет 102",  type: "classroom", floor: 1, x: 204, y: 175, width: 88, height: 65 },
-  { id: "r103", number: "103", name: "Кабинет 103",  type: "classroom", floor: 1, x: 396, y: 148, width: 88, height: 50 },
-  { id: "r104", number: "104", name: "Кабинет 104",  type: "classroom", floor: 1, x: 396, y: 202, width: 88, height: 50 },
-  { id: "r1cafe", number: "—", name: "Столовая",     type: "hall",     floor: 1, x: 108, y: 175, width: 90, height: 65, description: "Школьная столовая" },
-  { id: "r1psych", number: "—", name: "Психолог",    type: "service",  floor: 1, x: 492, y: 210, width: 80, height: 42, description: "Кабинет школьного психолога" },
-  // Этаж 1 — раздевалка нижняя
-  { id: "r1razd2", number: "—", name: "Раздевалка",  type: "hall",     floor: 1, x: 492, y: 148, width: 80, height: 58, description: "Раздевалка (нижний блок)" },
+  // === ЭТАЖ 1 (ViewBox 580×620) ===
+  // Верхний блок: кабинеты 109–105 (y=10..108, ширина 86, x шаг 94)
+  { id: "r109", number: "109", name: "Кабинет 109", type: "classroom", floor: 1, x: 10,  y: 10,  width: 84, height: 98 },
+  { id: "r108", number: "108", name: "Кабинет 108", type: "classroom", floor: 1, x: 102, y: 10,  width: 84, height: 98 },
+  { id: "r107", number: "107", name: "Кабинет 107", type: "classroom", floor: 1, x: 194, y: 10,  width: 84, height: 98 },
+  { id: "r106", number: "106", name: "Кабинет 106", type: "classroom", floor: 1, x: 286, y: 10,  width: 84, height: 98 },
+  { id: "r105", number: "105", name: "Кабинет 105", type: "classroom", floor: 1, x: 378, y: 10,  width: 84, height: 98 },
+  // Санузлы (левый блок, под 109, y=140..225)
+  { id: "r1su1", number: "—",  name: "С/У",          type: "service",  floor: 1, x: 10,  y: 140, width: 50, height: 40 },
+  { id: "r1su2", number: "—",  name: "С/У",          type: "service",  floor: 1, x: 10,  y: 184, width: 50, height: 40 },
+  // Правый столбец x=492 (внутри правого блока x=484, w=88)
+  { id: "r1vrach",  number: "—",   name: "Врач",       type: "service",  floor: 1, x: 492, y: 10,  width: 72, height: 50, description: "Кабинет врача" },
+  { id: "r1med",    number: "—",   name: "Медпункт",   type: "service",  floor: 1, x: 492, y: 66,  width: 72, height: 50, description: "Медицинский пункт" },
+  { id: "r1razd1",  number: "—",   name: "Раздевалка", type: "hall",     floor: 1, x: 492, y: 140, width: 72, height: 96, description: "Раздевалка" },
+  { id: "r1razd2",  number: "—",   name: "Раздевалка", type: "hall",     floor: 1, x: 492, y: 244, width: 72, height: 96, description: "Раздевалка" },
+  { id: "r103",     number: "103", name: "Кабинет 103", type: "classroom", floor: 1, x: 492, y: 348, width: 72, height: 80 },
+  { id: "r104",     number: "104", name: "Кабинет 104", type: "classroom", floor: 1, x: 492, y: 436, width: 72, height: 80 },
+  { id: "r1psych",  number: "—",   name: "Психолог",   type: "service",  floor: 1, x: 492, y: 524, width: 72, height: 76, description: "Кабинет школьного психолога" },
+  // Нижний блок: заход + 101 + столовая + 102 (y=307..455, x=56..430)
+  { id: "r101",   number: "101", name: "Кабинет 101", type: "classroom", floor: 1, x: 56,  y: 307, width: 86, height: 145, description: "Учебный кабинет" },
+  { id: "r1cafe", number: "—",   name: "Столовая",    type: "hall",      floor: 1, x: 150, y: 307, width: 184, height: 145, description: "Школьная столовая" },
+  { id: "r102",   number: "102", name: "Кабинет 102", type: "classroom", floor: 1, x: 342, y: 307, width: 86, height: 145 },
   // Этаж 2
   { id: "r201", number: "201", name: "Русский язык", teacher: "Белова О.Г.", type: "classroom", floor: 2, x: 20, y: 20, width: 100, height: 70 },
   { id: "r202", number: "202", name: "Литература", teacher: "Белова О.Г.", type: "classroom", floor: 2, x: 140, y: 20, width: 100, height: 70 },
@@ -234,56 +234,58 @@ export default function Index() {
 
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden" key={`floor-${activeFloor}`} style={{ animation: "fadeIn 0.25s ease-out" }}>
             <svg
-              viewBox="0 0 620 270"
+              viewBox={activeFloor === 1 ? "0 0 580 620" : "0 0 660 300"}
               className="w-full"
-              style={{ minHeight: 420, maxHeight: 700 }}
+              style={{ minHeight: activeFloor === 1 ? 480 : 260 }}
             >
               {activeFloor === 1 ? (
-                /* ===== 1 ЭТАЖ: Г-образный план по схеме эвакуации ===== */
-                <g>
-                  {/* Фон здания: верхний горизонтальный блок (кабинеты 5–9) */}
-                  <rect x="8" y="8" width="488" height="150" rx="8" fill="#F1F5F9" stroke="#CBD5E1" strokeWidth="1.5" />
-                  {/* Фон здания: правый вертикальный блок (кабинеты 3,4 + медпункт + раздевалки) */}
-                  <rect x="384" y="8" width="228" height="255" rx="8" fill="#F1F5F9" stroke="#CBD5E1" strokeWidth="1.5" />
-                  {/* Фон здания: нижний горизонтальный блок (кабинеты 1,2 + столовая) */}
-                  <rect x="8" y="158" width="380" height="105" rx="8" fill="#F1F5F9" stroke="#CBD5E1" strokeWidth="1.5" />
+                /* ===== 1 ЭТАЖ: Г-образный план точно по схеме эвакуации ===== */
+                <g fontFamily="Golos Text, sans-serif">
+                  {/* ===== Контур Г-образного здания =====
+                      ViewBox: 580 × 620
+                      Верхний блок  (кабинеты 105–109 + врач/мед):  x=8, y=8,   w=564, h=225
+                      Правый столбец (врач, мед, раздевалки, 103,104, психолог): x=484, y=8, w=88, h=594
+                      Нижний левый блок (заход, 101, столовая, 102): x=8, y=287, w=436, h=170
+                  */}
+                  <rect x="8"   y="8"   width="564" height="225" rx="6" fill="#EEF2F7" stroke="#94A3B8" strokeWidth="2.5"/>
+                  <rect x="484" y="8"   width="88"  height="604" rx="6" fill="#EEF2F7" stroke="#94A3B8" strokeWidth="2.5"/>
+                  <rect x="8"   y="287" width="436" height="172" rx="6" fill="#EEF2F7" stroke="#94A3B8" strokeWidth="2.5"/>
 
-                  {/* Коридор верхний горизонтальный */}
-                  <rect x="8" y="78" width="376" height="16" fill="#E2E8F0" />
-                  <text x="16" y="89" fontSize="7.5" fill="#94A3B8" fontFamily="Golos Text, sans-serif" fontWeight="600" letterSpacing="1">КОРИДОР</text>
-
-                  {/* Коридор нижний горизонтальный */}
-                  <rect x="8" y="158" width="376" height="16" fill="#E2E8F0" />
-                  <text x="16" y="169" fontSize="7.5" fill="#94A3B8" fontFamily="Golos Text, sans-serif" fontWeight="600" letterSpacing="1">КОРИДОР</text>
-
+                  {/* Коридор горизонтальный верхний */}
+                  <rect x="8"   y="116" width="476" height="20" fill="#D1D9E6"/>
+                  <text x="18" y="129" fontSize="7.5" fill="#64748B" fontWeight="700" letterSpacing="1.5">К О Р И Д О Р</text>
+                  {/* Коридор правый горизонтальный (продолжение) */}
+                  <rect x="484" y="116" width="88"  height="20" fill="#D1D9E6"/>
                   {/* Коридор вертикальный правый */}
-                  <rect x="384" y="78" width="228" height="16" fill="#E2E8F0" />
+                  <rect x="484" y="136" width="20"  height="380" fill="#D1D9E6"/>
+                  {/* Коридор нижний горизонтальный */}
+                  <rect x="8"   y="287" width="436" height="20" fill="#D1D9E6"/>
+                  <text x="18" y="300" fontSize="7.5" fill="#64748B" fontWeight="700" letterSpacing="1.5">К О Р И Д О Р</text>
 
                   {/* Выходы */}
-                  <g>
-                    {/* Выход — левый */}
-                    <rect x="56" y="90" width="46" height="12" rx="3" fill="#16A34A" />
-                    <text x="79" y="99.5" fontSize="7" fill="white" fontFamily="Golos Text" fontWeight="700" textAnchor="middle">ВЫХОД</text>
-                    {/* Выход — центральный верхний */}
-                    <rect x="290" y="72" width="46" height="12" rx="3" fill="#16A34A" />
-                    <text x="313" y="81.5" fontSize="7" fill="white" fontFamily="Golos Text" fontWeight="700" textAnchor="middle">ВЫХОД</text>
-                    {/* Выход — правый верхний */}
-                    <rect x="530" y="72" width="46" height="12" rx="3" fill="#16A34A" />
-                    <text x="553" y="81.5" fontSize="7" fill="white" fontFamily="Golos Text" fontWeight="700" textAnchor="middle">ВЫХОД</text>
-                    {/* Выход — нижний */}
-                    <rect x="290" y="255" width="46" height="12" rx="3" fill="#16A34A" />
-                    <text x="313" y="264.5" fontSize="7" fill="white" fontFamily="Golos Text" fontWeight="700" textAnchor="middle">ВЫХОД</text>
-                    {/* Выход — левый нижний */}
-                    <rect x="56" y="155" width="46" height="12" rx="3" fill="#16A34A" />
-                    <text x="79" y="164.5" fontSize="7" fill="white" fontFamily="Golos Text" fontWeight="700" textAnchor="middle">ВЫХОД</text>
-                  </g>
+                  <rect x="62"  y="104" width="52" height="16" rx="3" fill="#15803D"/>
+                  <text x="88"  y="115" fontSize="8" fill="white" fontWeight="700" textAnchor="middle">ВЫХОД</text>
+                  <rect x="284" y="104" width="52" height="16" rx="3" fill="#15803D"/>
+                  <text x="310" y="115" fontSize="8" fill="white" fontWeight="700" textAnchor="middle">ВЫХОД</text>
+                  <rect x="519" y="104" width="52" height="16" rx="3" fill="#15803D"/>
+                  <text x="545" y="115" fontSize="8" fill="white" fontWeight="700" textAnchor="middle">ВЫХОД</text>
+                  <rect x="519" y="278" width="52" height="16" rx="3" fill="#15803D"/>
+                  <text x="545" y="289" fontSize="8" fill="white" fontWeight="700" textAnchor="middle">ВЫХОД</text>
+                  <rect x="62"  y="275" width="52" height="16" rx="3" fill="#15803D"/>
+                  <text x="88"  y="286" fontSize="8" fill="white" fontWeight="700" textAnchor="middle">ВЫХОД</text>
+                  <rect x="270" y="450" width="52" height="16" rx="3" fill="#15803D"/>
+                  <text x="296" y="461" fontSize="8" fill="white" fontWeight="700" textAnchor="middle">ВЫХОД</text>
 
-                  {/* ЗАХОД */}
-                  <rect x="8" y="160" width="36" height="40" rx="4" fill="#FEF9C3" stroke="#FDE047" strokeWidth="1" />
-                  <text x="26" y="177" fontSize="6.5" fill="#78350F" fontFamily="Golos Text" fontWeight="600" textAnchor="middle">ЗА-</text>
-                  <text x="26" y="186" fontSize="6.5" fill="#78350F" fontFamily="Golos Text" fontWeight="600" textAnchor="middle">ХОД</text>
+                  {/* Заход */}
+                  <rect x="8"   y="305" width="46" height="72" rx="4" fill="#FEF3C7" stroke="#F59E0B" strokeWidth="1.5"/>
+                  <text x="31"  y="335" fontSize="8" fill="#92400E" fontWeight="700" textAnchor="middle">ЗА-</text>
+                  <text x="31"  y="347" fontSize="8" fill="#92400E" fontWeight="700" textAnchor="middle">ХОД</text>
+                  {/* Лестница */}
+                  <rect x="448" y="238" width="28" height="40" rx="3" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1"/>
+                  <text x="462" y="255" fontSize="6.5" fill="#64748B" textAnchor="middle">ЛЕСТ</text>
+                  <text x="462" y="265" fontSize="6.5" fill="#64748B" textAnchor="middle">НИЦА</text>
 
-                  {/* Rooms */}
+                  {/* --- Rooms --- */}
                   {floorRooms.map((room) => {
                     const cfg = TYPE_CONFIG[room.type];
                     const isSelected = selectedRoom?.id === room.id;
@@ -291,37 +293,37 @@ export default function Index() {
                     const isActive = isSelected || isHighlighted;
                     return (
                       <g key={room.id} style={{ cursor: "pointer" }} onClick={() => handleRoomClick(room)}>
-                        <rect x={room.x} y={room.y} width={room.width} height={room.height} rx={6}
+                        <rect x={room.x} y={room.y} width={room.width} height={room.height} rx={5}
                           fill={isActive ? cfg.activeColor : cfg.color}
                           stroke={isActive ? cfg.activeColor : cfg.stroke}
                           strokeWidth={1.5}
                           style={{ transition: "all 0.18s ease" }}
                         />
                         {room.number !== "—" && (
-                          <text x={room.x + room.width / 2} y={room.y + room.height / 2 - 6}
-                            textAnchor="middle" fontSize="13" fontWeight="700"
-                            fill={isActive ? "white" : "#1E293B"} fontFamily="Golos Text, sans-serif"
+                          <text x={room.x + room.width / 2} y={room.y + room.height / 2 - 7}
+                            textAnchor="middle" fontSize="14" fontWeight="700"
+                            fill={isActive ? "white" : "#1E293B"}
                             style={{ transition: "fill 0.18s" }}>
                             №{room.number}
                           </text>
                         )}
                         <text x={room.x + room.width / 2}
-                          y={room.y + (room.number !== "—" ? room.height / 2 + 9 : room.height / 2 + 5)}
-                          textAnchor="middle" fontSize="8.5"
-                          fill={isActive ? "rgba(255,255,255,0.9)" : "#64748B"} fontFamily="Golos Text, sans-serif"
+                          y={room.y + (room.number !== "—" ? room.height / 2 + 10 : room.height / 2 + 5)}
+                          textAnchor="middle" fontSize="9"
+                          fill={isActive ? "rgba(255,255,255,0.9)" : "#475569"}
                           style={{ transition: "fill 0.18s" }}>
-                          {room.name.length > 11 ? room.name.slice(0, 11) + "…" : room.name}
+                          {room.name.length > 12 ? room.name.slice(0, 12) + "…" : room.name}
                         </text>
                       </g>
                     );
                   })}
                 </g>
               ) : (
-                /* ===== 2 и 3 ЭТАЖ: стандартный прямоугольный план ===== */
-                <g>
-                  <rect x="8" y="8" width="604" height="254" rx="12" fill="#F8FAFC" stroke="#E8ECF2" strokeWidth="1.5" />
-                  <rect x="8" y="112" width="604" height="16" fill="#EEF1F6" />
-                  <text x="20" y="123" fontSize="8.5" fill="#A0AEC0" fontFamily="Golos Text, sans-serif" fontWeight="500">КОРИДОР</text>
+                /* ===== 2 и 3 ЭТАЖ ===== */
+                <g fontFamily="Golos Text, sans-serif">
+                  <rect x="8" y="8" width="644" height="284" rx="10" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="2" />
+                  <rect x="8" y="118" width="644" height="20" fill="#E8EEF6" />
+                  <text x="20" y="131" fontSize="8.5" fill="#94A3B8" fontWeight="600" letterSpacing="1">К О Р И Д О Р</text>
                   {floorRooms.map((room) => {
                     const cfg = TYPE_CONFIG[room.type];
                     const isSelected = selectedRoom?.id === room.id;
@@ -329,20 +331,16 @@ export default function Index() {
                     const isActive = isSelected || isHighlighted;
                     return (
                       <g key={room.id} style={{ cursor: "pointer" }} onClick={() => handleRoomClick(room)}>
-                        <rect x={room.x} y={room.y} width={room.width} height={room.height} rx={8}
+                        <rect x={room.x} y={room.y} width={room.width} height={room.height} rx={7}
                           fill={isActive ? cfg.activeColor : cfg.color}
                           stroke={isActive ? cfg.activeColor : cfg.stroke}
-                          strokeWidth={isActive ? 0 : 1.5}
+                          strokeWidth={1.5}
                           style={{ transition: "all 0.18s ease" }}
                         />
-                        {isActive && (
-                          <rect x={room.x} y={room.y} width={room.width} height={room.height} rx={8}
-                            fill="none" stroke="white" strokeWidth="2" strokeOpacity="0.4" />
-                        )}
                         {room.number !== "—" && (
                           <text x={room.x + room.width / 2} y={room.y + room.height / 2 - 7}
                             textAnchor="middle" fontSize="14" fontWeight="700"
-                            fill={isActive ? "white" : "#1E293B"} fontFamily="Golos Text, sans-serif"
+                            fill={isActive ? "white" : "#1E293B"}
                             style={{ transition: "fill 0.18s" }}>
                             {room.number}
                           </text>
@@ -350,7 +348,7 @@ export default function Index() {
                         <text x={room.x + room.width / 2}
                           y={room.y + (room.number !== "—" ? room.height / 2 + 10 : room.height / 2 + 5)}
                           textAnchor="middle" fontSize="9.5"
-                          fill={isActive ? "rgba(255,255,255,0.88)" : "#64748B"} fontFamily="Golos Text, sans-serif"
+                          fill={isActive ? "rgba(255,255,255,0.88)" : "#64748B"}
                           style={{ transition: "fill 0.18s" }}>
                           {room.name.length > 13 ? room.name.slice(0, 13) + "…" : room.name}
                         </text>
