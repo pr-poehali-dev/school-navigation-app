@@ -16,28 +16,28 @@ interface Room {
 }
 
 const ROOMS: Room[] = [
-  // Этаж 1 — верхний ряд (кабинеты 5–9 слева направо по плану эвакуации)
-  { id: "r109", number: "9",  name: "Кабинет №9",  type: "classroom", floor: 1, x: 12,  y: 12,  width: 88, height: 60 },
-  { id: "r108", number: "8",  name: "Кабинет №8",  type: "classroom", floor: 1, x: 108, y: 12,  width: 88, height: 60 },
-  { id: "r107", number: "7",  name: "Кабинет №7",  type: "classroom", floor: 1, x: 204, y: 12,  width: 88, height: 60 },
-  { id: "r106", number: "6",  name: "Кабинет №6",  type: "classroom", floor: 1, x: 300, y: 12,  width: 88, height: 60 },
-  { id: "r105", number: "5",  name: "Кабинет №5",  type: "classroom", floor: 1, x: 396, y: 12,  width: 88, height: 60 },
-  { id: "r1vrach", number: "—", name: "Врач",       type: "service",   floor: 1, x: 492, y: 12,  width: 80, height: 28, description: "Кабинет врача" },
-  { id: "r1med",   number: "—", name: "Медпункт",   type: "service",   floor: 1, x: 492, y: 44,  width: 80, height: 28, description: "Медицинский пункт" },
+  // Этаж 1 — верхний ряд (кабинеты 109–105 слева направо по плану эвакуации)
+  { id: "r109", number: "109", name: "Кабинет 109", type: "classroom", floor: 1, x: 12,  y: 12,  width: 88, height: 60 },
+  { id: "r108", number: "108", name: "Кабинет 108", type: "classroom", floor: 1, x: 108, y: 12,  width: 88, height: 60 },
+  { id: "r107", number: "107", name: "Кабинет 107", type: "classroom", floor: 1, x: 204, y: 12,  width: 88, height: 60 },
+  { id: "r106", number: "106", name: "Кабинет 106", type: "classroom", floor: 1, x: 300, y: 12,  width: 88, height: 60 },
+  { id: "r105", number: "105", name: "Кабинет 105", type: "classroom", floor: 1, x: 396, y: 12,  width: 88, height: 60 },
+  { id: "r1vrach", number: "—", name: "Врач",        type: "service",  floor: 1, x: 492, y: 12,  width: 80, height: 28, description: "Кабинет врача" },
+  { id: "r1med",   number: "—", name: "Медпункт",    type: "service",  floor: 1, x: 492, y: 44,  width: 80, height: 28, description: "Медицинский пункт" },
   // Этаж 1 — санузлы (левая часть)
-  { id: "r1su1", number: "—", name: "С/У",          type: "service",   floor: 1, x: 12,  y: 82,  width: 40, height: 30 },
-  { id: "r1su2", number: "—", name: "С/У",          type: "service",   floor: 1, x: 12,  y: 116, width: 40, height: 30 },
+  { id: "r1su1", number: "—", name: "С/У",           type: "service",  floor: 1, x: 12,  y: 82,  width: 40, height: 30 },
+  { id: "r1su2", number: "—", name: "С/У",           type: "service",  floor: 1, x: 12,  y: 116, width: 40, height: 30 },
   // Этаж 1 — раздевалки правый блок верх
-  { id: "r1razd1", number: "—", name: "Раздевалка", type: "hall",      floor: 1, x: 492, y: 86,  width: 80, height: 50, description: "Раздевалка (верхний блок)" },
-  // Этаж 1 — нижний ряд: кабинеты 1–3, столовая, психолог
-  { id: "r101", number: "1",  name: "Кабинет №1",   type: "classroom", floor: 1, x: 12,  y: 175, width: 88, height: 65, description: "Учебный кабинет" },
-  { id: "r102", number: "2",  name: "Кабинет №2",   type: "classroom", floor: 1, x: 204, y: 175, width: 88, height: 65 },
-  { id: "r103", number: "3",  name: "Кабинет №3",   type: "classroom", floor: 1, x: 396, y: 148, width: 88, height: 50 },
-  { id: "r104", number: "4",  name: "Кабинет №4",   type: "classroom", floor: 1, x: 396, y: 202, width: 88, height: 50 },
-  { id: "r1cafe", number: "—", name: "Столовая",    type: "hall",      floor: 1, x: 108, y: 175, width: 90, height: 65, description: "Школьная столовая" },
-  { id: "r1psych", number: "—", name: "Психолог",   type: "service",   floor: 1, x: 492, y: 210, width: 80, height: 42, description: "Кабинет школьного психолога" },
+  { id: "r1razd1", number: "—", name: "Раздевалка",  type: "hall",     floor: 1, x: 492, y: 86,  width: 80, height: 50, description: "Раздевалка (верхний блок)" },
+  // Этаж 1 — нижний ряд: кабинеты 101–104, столовая, психолог
+  { id: "r101", number: "101", name: "Кабинет 101",  type: "classroom", floor: 1, x: 12,  y: 175, width: 88, height: 65, description: "Учебный кабинет" },
+  { id: "r102", number: "102", name: "Кабинет 102",  type: "classroom", floor: 1, x: 204, y: 175, width: 88, height: 65 },
+  { id: "r103", number: "103", name: "Кабинет 103",  type: "classroom", floor: 1, x: 396, y: 148, width: 88, height: 50 },
+  { id: "r104", number: "104", name: "Кабинет 104",  type: "classroom", floor: 1, x: 396, y: 202, width: 88, height: 50 },
+  { id: "r1cafe", number: "—", name: "Столовая",     type: "hall",     floor: 1, x: 108, y: 175, width: 90, height: 65, description: "Школьная столовая" },
+  { id: "r1psych", number: "—", name: "Психолог",    type: "service",  floor: 1, x: 492, y: 210, width: 80, height: 42, description: "Кабинет школьного психолога" },
   // Этаж 1 — раздевалка нижняя
-  { id: "r1razd2", number: "—", name: "Раздевалка", type: "hall",      floor: 1, x: 492, y: 148, width: 80, height: 58, description: "Раздевалка (нижний блок)" },
+  { id: "r1razd2", number: "—", name: "Раздевалка",  type: "hall",     floor: 1, x: 492, y: 148, width: 80, height: 58, description: "Раздевалка (нижний блок)" },
   // Этаж 2
   { id: "r201", number: "201", name: "Русский язык", teacher: "Белова О.Г.", type: "classroom", floor: 2, x: 20, y: 20, width: 100, height: 70 },
   { id: "r202", number: "202", name: "Литература", teacher: "Белова О.Г.", type: "classroom", floor: 2, x: 140, y: 20, width: 100, height: 70 },
