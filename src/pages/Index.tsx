@@ -236,7 +236,7 @@ export default function Index() {
             <svg
               viewBox="0 0 620 270"
               className="w-full"
-              style={{ minHeight: 220, maxHeight: 420 }}
+              style={{ minHeight: 420, maxHeight: 700 }}
             >
               {activeFloor === 1 ? (
                 /* ===== 1 ЭТАЖ: Г-образный план по схеме эвакуации ===== */
